@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
+exports[`<Button /> Button renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-inline-box;
@@ -76,7 +76,7 @@ exports[`Button renders correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Button renders with icons 1`] = `
+exports[`<Button /> Button renders with icons 1`] = `
 <DocumentFragment>
   .emotion-6 {
   display: -webkit-inline-box;
@@ -233,7 +233,7 @@ exports[`Button renders with icons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`shows spinner and loading text if isLoading and loadingText 1`] = `
+exports[`<Button /> shows spinner and loading text if isLoading and loadingText 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   0% {
@@ -320,7 +320,7 @@ exports[`shows spinner and loading text if isLoading and loadingText 1`] = `
   display: inline-block;
   border-color: currentColor;
   border-style: solid;
-  border-radius: 9999px;
+  border-radius: 99999px;
   border-width: 2px;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -347,8 +347,18 @@ exports[`shows spinner and loading text if isLoading and loadingText 1`] = `
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   margin-right: 0.5rem;
+  font-size: 1em;
+  line-height: normal;
 }
 
 <button
@@ -375,7 +385,7 @@ exports[`shows spinner and loading text if isLoading and loadingText 1`] = `
 </DocumentFragment>
 `;
 
-exports[`shows spinner if isLoading 1`] = `
+exports[`<Button /> shows spinner if isLoading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   0% {
@@ -459,15 +469,25 @@ exports[`shows spinner if isLoading 1`] = `
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   margin-right: 0;
+  font-size: 1em;
+  line-height: normal;
 }
 
 .emotion-1 {
   display: inline-block;
   border-color: currentColor;
   border-style: solid;
-  border-radius: 9999px;
+  border-radius: 99999px;
   border-width: 2px;
   border-bottom-color: transparent;
   border-left-color: transparent;
