@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Elements inside input render correctly 1`] = `
+exports[`<Input /> Elements inside input render correctly 1`] = `
 <DocumentFragment>
   .emotion-3 {
   width: 100%;
@@ -32,7 +32,6 @@ exports[`Elements inside input render correctly 1`] = `
   justify-content: center;
   position: absolute;
   top: 0;
-  z-index: 2;
 }
 
 .emotion-1 {
@@ -116,7 +115,6 @@ exports[`Elements inside input render correctly 1`] = `
   justify-content: center;
   position: absolute;
   top: 0;
-  z-index: 2;
 }
 
 <div
@@ -143,7 +141,7 @@ exports[`Elements inside input render correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Input addons render correctly 1`] = `
+exports[`<Input /> addons render correctly 1`] = `
 <DocumentFragment>
   .emotion-3 {
   width: 100%;
@@ -293,7 +291,7 @@ exports[`Input addons render correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Input renders correctly 1`] = `
+exports[`<Input /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   width: 100%;
