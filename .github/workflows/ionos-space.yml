@@ -1,0 +1,42 @@
+name: IONOS.space
+
+on: [push]
+
+jobs:
+  ionos-space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      - name: Get Ionos Project data
+        uses: ionos-deploy-now/retrieve-project-info-action@v1.0.0
+        id: project
+        with:
+          service-host: api-eu.ionos.space
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          project: 97aa24ca-af05-4834-9b66-abad4b73992d
+      - name: Setup Node.js 12.16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16.x
+      - name: Prepare Project build environment
+        run: |
+          npm install --global yarn
+          yarn install --frozen-lockfile
+      - name: Build Node project
+        run: yarn build
+        env:
+          SITE_URL: ${{ steps.project.outputs.site-url }}
+          CI: true
+      - name: Deploy to IONOS
+        uses: ionos-deploy-now/deploy-to-ionos-action@v1.0.0
+        with:
+          service-host: api-eu.ionos.space
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          remote-host: ${{ steps.project.outputs.remote-host }}
+          dist-folder: build
+          project: 97aa24ca-af05-4834-9b66-abad4b73992d
+          storage-quota: ${{ steps.project.outputs.storage-quota }}
+          branch-id: ${{ steps.project.outputs.branch-id }}
